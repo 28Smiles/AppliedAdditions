@@ -12,8 +12,8 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 
 
 version = "1.0"
-group = "com.yourname.modid" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "modid"
+group = "de.smiles.appliedadditions" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "applied-additions"
 
 sourceCompatibility = targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.
 compileJava {
@@ -34,8 +34,8 @@ minecraft {
 }
 
 dependencies {
-    // you may put jars on which you depend on in ./libs
-    // or you may define them like so..
+	provided files("lib/appliedenergistics2-rv5-alpha-7-api.jar")
+
     //compile "some.group:artifact:version:classifier"
     //compile "some.group:artifact:version"
       
