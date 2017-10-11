@@ -1,16 +1,16 @@
 [
 {
-  "modid": "examplemod",
-  "name": "Example Mod",
-  "description": "Example placeholder mod.",
+  "modid": "applied-additions",
+  "name": "Applied Additions",
+  "description": "A Mod about optimising the matter energy conversion.",
   "version": "${version}",
   "mcversion": "${mcversion}",
-  "url": "",
+  "url": "https://github.com/28Smiles/AppliedAdditions",
   "updateUrl": "",
-  "authorList": ["ExampleDude"],
-  "credits": "The Forge and FML guys, for making this example",
+  "authorList": ["28Smiles"],
+  "credits": "All Modders for keeping Minecraft interesting",
   "logoFile": "",
   "screenshots": [],
-  "dependencies": []
+  "dependencies": [ "appliedenergistics2" ]
 }
 ]
