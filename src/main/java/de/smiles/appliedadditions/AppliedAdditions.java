@@ -30,7 +30,7 @@ import net.minecraftforge.fml.relauncher.Side;
 public class AppliedAdditions
 {
     public static final String ID = "applied-additions";
-    public static final String VERSION = "v1.00";
+    public static final String VERSION = "v1.01";
     public static AppliedAdditions instance = null;
 
 	private static Voidifier voidifier = null;

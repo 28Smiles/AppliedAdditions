@@ -1,11 +1,14 @@
 package de.smiles.appliedadditions.block.voidifier;
 
+import java.util.List;
+
 import de.smiles.appliedadditions.network.AAMessageHandler;
 import de.smiles.appliedadditions.network.FieldUpdatePacket;
 import de.smiles.appliedadditions.network.SyncTile;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.inventory.Container;
 import net.minecraft.inventory.Slot;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.fml.common.FMLCommonHandler;
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -32,6 +35,12 @@ public class ContainerVoidifier extends Container
 	    for (int x = 0; x < 9; ++x) {
 	        this.addSlotToContainer(new Slot(player.inventory, x, 8 + x * 18, 142));
 	    }
+	}
+
+	@Override
+	public ItemStack transferStackInSlot(EntityPlayer player, int slotIndex)
+	{
+		return ItemStack.EMPTY;
 	}
 
 	@Override
