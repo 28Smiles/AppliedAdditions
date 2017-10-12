@@ -1,0 +1,25 @@
+{
+  "type": "forge:ore_shaped",
+  "pattern": [
+    "SES",
+	"ECE",
+	"SES"
+  ],
+  "key": {
+	"S": {
+		"item": "appliedenergistics2:smooth_sky_stone_block",
+		"data": 0
+	},
+	"E": {
+        "type": "appliedenergistics2:part",
+		"part": "material.engineering_processor"
+    },
+	"C": {
+        "item": "appliedenergistics2:crafting_accelerator",
+		"data": 0
+    }
+  },
+  "result": {
+    "item": "applied-additions:voidifier"
+  }
+}
