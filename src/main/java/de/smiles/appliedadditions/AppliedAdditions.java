@@ -9,9 +9,11 @@ import de.smiles.appliedadditions.network.GuiHandler;
 import de.smiles.appliedadditions.network.SyncTile;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemBlock;
+import net.minecraft.item.ItemStack;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.event.RegistryEvent;
@@ -25,16 +27,18 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
-@Mod(modid = AppliedAdditions.ID, version = AppliedAdditions.VERSION, acceptableRemoteVersions="v1.03")
+@Mod(modid = AppliedAdditions.ID, version = AppliedAdditions.VERSION, acceptableRemoteVersions="v1.04")
 @Mod.EventBusSubscriber(modid = AppliedAdditions.ID)
 public class AppliedAdditions
 {
     public static final String ID = "applied-additions";
-    public static final String VERSION = "v1.03";
+    public static final String VERSION = "v1.04";
     public static AppliedAdditions instance = null;
 
 	private static Voidifier voidifier = null;
 	private static Item voidifierItem = null;
+
+	public static CreativeTabs tabAA;
 
 	@SubscribeEvent
 	public static void registerModels(ModelRegistryEvent modelRegistryEvent)
@@ -54,6 +58,14 @@ public class AppliedAdditions
 	public static void registerItems(RegistryEvent.Register<Item> event)
 	{
 		event.getRegistry().register(voidifierItem  = new ItemBlock(voidifier).setRegistryName(voidifier.getRegistryName()));
+		tabAA = new CreativeTabs("aatab.name") {
+			@Override
+			public ItemStack getTabIconItem()
+			{
+				return new ItemStack(voidifierItem);
+			}
+		};
+		voidifier.setCreativeTab(tabAA);
 	}
 
 	@EventHandler

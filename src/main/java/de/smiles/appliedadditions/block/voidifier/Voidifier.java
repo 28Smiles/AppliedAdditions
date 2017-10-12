@@ -24,7 +24,7 @@ public class Voidifier extends Block implements ITileEntityProvider
 		super(Material.IRON);
 		setUnlocalizedName("voidifier");
 		setRegistryName("voidifier");
-		setCreativeTab(CreativeTabs.REDSTONE);
+		setCreativeTab(AppliedAdditions.tabAA);
 
 		setLightOpacity(255);
 		setLightLevel(0);
