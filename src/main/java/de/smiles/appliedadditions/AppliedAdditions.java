@@ -25,12 +25,12 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 import net.minecraftforge.fml.relauncher.Side;
 
-@Mod(modid = AppliedAdditions.ID, version = AppliedAdditions.VERSION, acceptableRemoteVersions="v1.01")
+@Mod(modid = AppliedAdditions.ID, version = AppliedAdditions.VERSION, acceptableRemoteVersions="v1.03")
 @Mod.EventBusSubscriber(modid = AppliedAdditions.ID)
 public class AppliedAdditions
 {
     public static final String ID = "applied-additions";
-    public static final String VERSION = "v1.02";
+    public static final String VERSION = "v1.03";
     public static AppliedAdditions instance = null;
 
 	private static Voidifier voidifier = null;
